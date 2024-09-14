@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="main">
+        <header class="header">
+            <a href="#" class="logo">Quiz</a>
+            <nav class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="signup.html">Signup</a>
+                <a href="login.html">CLogin</a>
+                <a href="result.html">Login</a>
+                <a href="quiz.html">Teacher's Login</a>
+                <a href="admin.html">Adimn Login</a>
+            </nav>
+        </header>
+      
+        <div class="container">
+            <!-- Home Section -->
+            <section class="home">
+                <div class="home-content">
+                    <h1>Quiz Website</h1>
+                    <p>Let’s move to the quiz game</p>
+                    <button class="start-btn">Start Quiz</button>
+                </div>
+            </section>
+
+            <!-- Quiz Section -->
+            <section class="quiz-section">
+                <div class="quiz-box">
+                    <h1>Codehal Quiz</h1>
+                    <div class="quiz-header">
+                        <span>Quiz website Tutorials</span>
+                        <span class="header-score">Score: 0/5</span>
+                    </div>
+                    <h2 class="question-text">What does HTML stand for?</h2>
+                    <div class="option-list">
+                        <div class="option"><span>a. Hypertext Markup Language</span></div>
+                        <div class="option"><span>b. Hyperlink and Text Markup Language</span></div>
+                        <div class="option"><span>c. Hypertext Multi Language</span></div>
+                        <div class="option"><span>d. Hypertext Machine Language</span></div>
+                    </div>
+                    
+                    <div class="quiz-footer">
+                        <span class="question-total">1 of 5 questions</span>
+                        <button class="next-btn">Next</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>  
+
+    <div class="popup-info">
+        <h2>Quiz Guide</h2>
+        <span class="info">1. This is a quiz game for the class.</span>
+        <span class="info">2. This is a quiz game for the class.</span>
+        <span class="info">3. This is a quiz game for the class.</span>
+        <span class="info">4. This is a quiz game for the class.</span>
+        <span class="info">5. This is a quiz game for the class.</span>
+        <div class="btn-group">
+            <button class="info-btn exit-btn">Exit Quiz</button>
+            <a href="#" class="info-btn continue-btn">Continue</a>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

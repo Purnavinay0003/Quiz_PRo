@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Login Page</title>
+</head>
+
+
+<style>/* General Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    /* Body background and layout */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color:black;
+        
+    }
+    
+    /* Login container styling */
+    .login {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 800px;
+        background-color: white;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    
+    /* Image on the left */
+    .login__img {
+        width: 50%;
+        height: 50vh;
+        object-fit: cover;
+        background-image: url('background.jpeg');
+        border-radius: 5px;
+        
+        margin: 5px;
+    }
+    
+    /* Login form styling */
+    .login__form {
+        padding: 40px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .login__title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    /* Input field styling */
+    .login__box {
+        margin-bottom: 20px;
+        position: relative;
+    }
+    
+   /* .login__icon {
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        font-size: 1.5rem;
+        color: #333;
+    }*/
+    
+    .login__input {
+        width: 100%;
+        padding: 12px 12px 12px 40px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+    
+    .login__label {
+        position: absolute;
+        left: 40px;
+        top: -15px;
+        font-size: 0.9rem;
+        color: #555;
+        background-color: white;
+        padding: 0 5px;
+    }
+    
+    .login__eye {
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    /* Checkbox and forgot password styling */
+    .login__check {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .login__check-group {
+        display: flex;
+        align-items: center;
+    }
+    
+    .login__check-input {
+        margin-right: 10px;
+    }
+    
+    .login__forgot {
+        font-size: 0.9rem;
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    .login__forgot:hover {
+        text-decoration: underline;
+    }
+    
+    /* Button styles */
+    .login__button {
+        padding: 12px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .login__button:hover {
+        background-color: #0056b3;
+    }
+    
+    /* Register link */
+    .login__register {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.9rem;
+    }
+    
+    .login__register a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    .login__register a:hover {
+        text-decoration: underline;
+    }
+    </style>
+
+
+
+<script>// JavaScript to handle the visibility toggle of the password
+    const togglePassword = document.getElementById('login-eye');
+    const passwordField = document.getElementById('login-pass');
+    
+    togglePassword.addEventListener('click', function () {
+        // Toggle the type attribute for password input
+        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordField.setAttribute('type', type);
+    
+        // Toggle the eye icon
+        this.classList.toggle('ri-eye-line');
+        this.classList.toggle('ri-eye-off-line');
+    });
+    </script>
+
+
+
+
+
+
+
+
+
+<body>
+    <div class="login">
+        <img src="assets/img/login-bg.png" alt="login image" class="login__img">
+
+        <form action="" class="login__form">
+            <h1 class="login__title">Teacher's Login</h1>
+
+            <div class="login__content">
+                <div class="login__box">
+                    <i class="ri-user-3-line login__icon"></i>
+                    <div class="login__box-input">
+                        <input type="email" required class="login__input" id="login-email" placeholder=" ">
+                        <label for="login-email" class="login__label">Email</label>
+                    </div>
+                </div>
+
+                <div class="login__box">
+                    <i class="ri-lock-2-line login__icon"></i>
+                    <div class="login__box-input">
+                        <input type="password" required class="login__input" id="login-pass" placeholder=" ">
+                        <label for="login-pass" class="login__label">Password</label>
+                        <i class="ri-eye-off-line login__eye" id="login-eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="login__check">
+                <div class="login__check-group">
+                    <input type="checkbox" class="login__check-input" id="login-check">
+                    <label for="login-check" class="login__check-label">Remember me</label>
+                </div>
+                <a href="#" class="login__forgot">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login__button">Login</button>
+
+            <p class="login__register">
+                Don't have an account? <a href="#">Register</a>
+            </p>
+        </form>
+    </div>
+
+    <!--=============== MAIN JS ===============-->
+</body>
+</html>
